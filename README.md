@@ -172,6 +172,5 @@ responsible_ai/       # model card + risk assessment
 | 2 | `llm-serving-bench` | self-hosted serving: latency / throughput / cost / SLO |
 | 3 | **multi-agent-prod** | **production agent patterns + tracing + evals-in-CI** |
 
-See [`PROJECT_WRAPUP.md`](PROJECT_WRAPUP.md) for the one-page interview summary.
 
 MIT licensed. © 2026 Henry Yan.
