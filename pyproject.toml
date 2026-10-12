@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-agent-prod"
+version = "0.1.0"
+description = "Production-shaped multi-agent patterns: orchestrator-worker, critic/reflection, blackboard — self-hosted backend, tracing, and evals-in-CI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Henry Yan" }]
+keywords = ["multi-agent", "llm", "agents", "tracing", "evals", "self-hosted"]
+
+dependencies = []
+
+[project.optional-dependencies]
+live = ["httpx>=0.27"]
+tracing = ["langfuse>=2.0"]
+dev = ["pytest>=8.0", "flake8>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

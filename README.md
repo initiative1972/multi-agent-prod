@@ -1,4 +1,5 @@
 # multi-agent-prod
+
 **Production-shaped multi-agent patterns — not demo-ware.**
 
 Three named patterns, one shared memory, one trace, one eval gate:

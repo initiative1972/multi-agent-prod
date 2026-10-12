@@ -1,0 +1,152 @@
+[
+  {
+    "span_id": 1,
+    "parent_id": null,
+    "name": "trajectory",
+    "agent": "runtime",
+    "duration_ms": 9.193,
+    "attributes": {
+      "provider": "mock"
+    }
+  },
+  {
+    "span_id": 2,
+    "parent_id": 1,
+    "name": "planner",
+    "agent": "planner",
+    "duration_ms": 0.02,
+    "attributes": {}
+  },
+  {
+    "span_id": 3,
+    "parent_id": 2,
+    "name": "plan",
+    "agent": "planner",
+    "duration_ms": 0.0,
+    "attributes": {
+      "tasks": [
+        "retrieve",
+        "contact_check",
+        "draft_review"
+      ]
+    }
+  },
+  {
+    "span_id": 4,
+    "parent_id": 1,
+    "name": "worker",
+    "agent": "retrieve",
+    "duration_ms": 7.052,
+    "attributes": {
+      "task": "retrieve",
+      "hop": 1
+    }
+  },
+  {
+    "span_id": 5,
+    "parent_id": 4,
+    "name": "grounded_or_refuse",
+    "agent": "retriever",
+    "duration_ms": 0.0,
+    "attributes": {
+      "grounded": true,
+      "top_score": 0.5,
+      "n": 2
+    }
+  },
+  {
+    "span_id": 6,
+    "parent_id": 1,
+    "name": "worker",
+    "agent": "contact_check",
+    "duration_ms": 1.972,
+    "attributes": {
+      "task": "contact_check",
+      "hop": 2
+    }
+  },
+  {
+    "span_id": 7,
+    "parent_id": 6,
+    "name": "contact_rules",
+    "agent": "policy",
+    "duration_ms": 0.0,
+    "attributes": {
+      "flags": []
+    }
+  },
+  {
+    "span_id": 8,
+    "parent_id": 1,
+    "name": "worker",
+    "agent": "draft_review",
+    "duration_ms": 0.061,
+    "attributes": {
+      "task": "draft_review",
+      "hop": 3
+    }
+  },
+  {
+    "span_id": 9,
+    "parent_id": 8,
+    "name": "reflection_round",
+    "agent": "critic",
+    "duration_ms": 0.037,
+    "attributes": {
+      "round": 1
+    }
+  },
+  {
+    "span_id": 10,
+    "parent_id": 8,
+    "name": "draft_review",
+    "agent": "critic",
+    "duration_ms": 0.0,
+    "attributes": {
+      "verdict": "pass",
+      "rounds": 1,
+      "decision": "draft"
+    }
+  },
+  {
+    "span_id": 11,
+    "parent_id": 1,
+    "name": "hitl_shown",
+    "agent": "hitl",
+    "duration_ms": 0.0,
+    "attributes": {
+      "draft": "Based only on published product and policy information, here is a plain-language summary with no guaranteed outcomes and no pressure to act. [COMMS-01] [COMMS-02]",
+      "evidence_ids": [
+        "COMMS-01",
+        "COMMS-02"
+      ],
+      "decision": "draft",
+      "flags": []
+    }
+  },
+  {
+    "span_id": 12,
+    "parent_id": 1,
+    "name": "hitl_decision",
+    "agent": "hitl",
+    "duration_ms": 0.0,
+    "attributes": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "span_id": 13,
+    "parent_id": 1,
+    "name": "final",
+    "agent": "runtime",
+    "duration_ms": 0.0,
+    "attributes": {
+      "decision": "draft",
+      "hitl": "approved",
+      "hops": 3,
+      "reflection_rounds": 1,
+      "customer_ready": true
+    }
+  }
+]

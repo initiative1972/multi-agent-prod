@@ -1,0 +1,18 @@
+{
+  "RIVER001": {
+    "segment": "engaged-saver",
+    "opted_in": true,
+    "channel": "email",
+    "contacts_30d": 1,
+    "frequency_cap_30d": 4,
+    "extra_care": false
+  },
+  "QUIET001": {
+    "segment": "dormant",
+    "opted_in": false,
+    "channel": "email",
+    "contacts_30d": 5,
+    "frequency_cap_30d": 4,
+    "extra_care": true
+  }
+}

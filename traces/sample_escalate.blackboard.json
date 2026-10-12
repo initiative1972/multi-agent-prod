@@ -1,0 +1,53 @@
+{
+  "run_id": "9317eb509ad9",
+  "goal": "Draft a term deposit note for this saver.",
+  "customer_id": "QUIET001",
+  "decision": "escalate",
+  "reason": "contact-rule or extra-care flag present; a human must decide, not the agent.",
+  "hitl_status": "pending",
+  "hitl_notes": "escalated to a human owner",
+  "hops": 3,
+  "reflection_rounds": 1,
+  "evidence": [
+    {
+      "source_id": "COMMS-01",
+      "title": "[COMMS-01] Term deposit factsheet (published points only)",
+      "excerpt": "A term deposit locks a fixed amount for a fixed term at a rate published on the product page. Marketing copy may restate published rate bands and terms. It must never promise a sp\u2026",
+      "score": 1.0
+    }
+  ],
+  "flags": [
+    {
+      "code": "CR-OPT",
+      "detail": "customer has not opted in / has opted out",
+      "severity": "high"
+    },
+    {
+      "code": "CR-FREQ",
+      "detail": "frequency cap reached (5/4 in 30d)",
+      "severity": "medium"
+    },
+    {
+      "code": "CR-VULN",
+      "detail": "extra-care / vulnerability indicator present",
+      "severity": "high"
+    }
+  ],
+  "draft": "Based only on published product and policy information, here is a plain-language summary with no guaranteed outcomes and no pressure to act. [COMMS-01]",
+  "customer_ready": null,
+  "history": [
+    {
+      "source": "retrieve_worker",
+      "key": "retrieved",
+      "version": 1,
+      "ts": "2026-10-12T04:18:08.999761+00:00"
+    },
+    {
+      "source": "contact_check_worker",
+      "key": "contact_checked",
+      "version": 1,
+      "ts": "2026-10-12T04:18:08.999878+00:00"
+    }
+  ],
+  "disclaimer": "DEMO ONLY - synthetic data. Not a send, not a decision about any real person. A human must approve before anything is customer-ready."
+}

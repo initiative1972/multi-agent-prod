@@ -1,0 +1,6 @@
+# Only needed to talk to a self-hosted OpenAI-compatible endpoint (vLLM / TGI).
+# The core, tests, evals and CI do NOT need this.
+httpx>=0.27
+# Optional distributed tracing export:
+# langfuse>=2.0
+# opentelemetry-sdk>=1.25

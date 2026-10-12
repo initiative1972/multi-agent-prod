@@ -1,0 +1,43 @@
+{
+  "run_id": "032778415590",
+  "goal": "Draft a short note to an opted-in saver about our term deposit options.",
+  "customer_id": "RIVER001",
+  "decision": "draft",
+  "reason": "grounded in cited policy and policy-safe; a human must still approve before it is customer-ready.",
+  "hitl_status": "approved",
+  "hitl_notes": null,
+  "hops": 3,
+  "reflection_rounds": 1,
+  "evidence": [
+    {
+      "source_id": "COMMS-01",
+      "title": "[COMMS-01] Term deposit factsheet (published points only)",
+      "excerpt": "A term deposit locks a fixed amount for a fixed term at a rate published on the product page. Marketing copy may restate published rate bands and terms. It must never promise a sp\u2026",
+      "score": 0.5
+    },
+    {
+      "source_id": "COMMS-02",
+      "title": "[COMMS-02] Contact and consent rules",
+      "excerpt": "Marketing contact requires a current opt-in for the relevant channel. Do not contact a customer who has opted out. Respect frequency caps: no more than a set number of marketing c\u2026",
+      "score": 0.25
+    }
+  ],
+  "flags": [],
+  "draft": "Based only on published product and policy information, here is a plain-language summary with no guaranteed outcomes and no pressure to act. [COMMS-01] [COMMS-02]",
+  "customer_ready": "Based only on published product and policy information, here is a plain-language summary with no guaranteed outcomes and no pressure to act. [COMMS-01] [COMMS-02]",
+  "history": [
+    {
+      "source": "retrieve_worker",
+      "key": "retrieved",
+      "version": 1,
+      "ts": "2026-10-12T04:18:08.952911+00:00"
+    },
+    {
+      "source": "contact_check_worker",
+      "key": "contact_checked",
+      "version": 1,
+      "ts": "2026-10-12T04:18:08.987228+00:00"
+    }
+  ],
+  "disclaimer": "DEMO ONLY - synthetic data. Not a send, not a decision about any real person. A human must approve before anything is customer-ready."
+}
